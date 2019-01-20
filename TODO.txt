@@ -3,3 +3,4 @@
 - write the license on the files
 - create the minified js version
 - user must be able to save zoom & zoom position 
+- conjunctions lines must arrive to the center of the departments
