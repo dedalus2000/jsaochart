@@ -2,6 +2,12 @@
 
 JsAOChart : Another Organizational Chart in JS
 
+
+Screenshot:
+
+![Click here for the screenshot]( https://user-images.githubusercontent.com/2760504/51443121-76a29b00-1ce4-11e9-960c-fb7972787007.png )
+
+
 I was unable to find a good -for my needs- organizational chart library, so I tryed to create it by my own: jaoachart is the result..
 
 Try to see the demo with 
@@ -29,4 +35,3 @@ The departments could have persons; they can be listed with different text style
 # Few notes:
 - look at the TODO.txt for the known missing features/requests. I will merge it in this readme very soon
 - you can write your own department drawer by passing the relevant function in the 'create_dept' option. It must return a Fabric object; look at the \_create_dept function for the arguments. This part have to be improved
-
