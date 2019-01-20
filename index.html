@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.6.0/fabric.min.js"></script>
+        <script type="text/javascript" src="lib/jsaochart.js"></script>
+    </head> 
+    <body>
+        <input type="checkbox" onclick='org1.setEditable(this.checked); org2.setEditable(this.checked)'>Editable<br>
+        <table>
+            <tr>
+                <td>
+                    <canvas id='chart1' width='600px' height='600px' style='border-width:1px; border-style:solid;'></canvas>
+                </td> 
+                <td>
+                    <canvas id='chart2' width='600px' height='600px' style='border-width:1px; border-style:solid;'></canvas>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+        var tree = {
+            color: "red",
+            components: [ "User1", "User2", "User3" ],
+            name: "Root Dept",
+            children: [ {
+                name: "Dept1",
+                components: [ "User4", "User5" ],
+                children: [ {
+                    name: "Dept2 - Style",
+                    components: [ {text:"User6", fontSize: 16}, "User7" ],
+                }, {
+                    name: "Dept3",
+                    components: [ "User8", "User9" ],
+                } ]
+            }, {
+                name: "Dept4 - Staff+Coords",
+                color: "blue",
+                is_staff: true,
+                components: [ "User10", "User11" ],
+                children: [ {
+                    name: "Dept5 - style",
+                    left: 320,top:350,
+                    components: [ "User12", {text:"User12", fontStyle: 'italic', fontWeight:'bold', fontSize: 12} ],
+                }, {
+                    name: "Dept6",
+                    components: [ "User Reverse 15", "User Reverse 14" ],
+                    children: [
+                        {
+                            name: "Dept7 - Staff",
+                            color: "green",
+                            is_staff: true,
+                            children:[
+                                {components:['No Name', 'User 16', 'User 17']}
+                            ]
+                        }
+                    ]
+                }, {
+                    name: "Dept8"
+                }]
+            } ]
+        };
+
+        var cb = function(coords) {
+            console.log("Coords to be saved for", this.node_id,":", coords);
+        }
+        var org1 = new OrgChart('chart1', options={
+            readonly:true,
+            save_coords_cb:cb,
+        })
+        org1.generateOrg(tree)
+        
+        var org2 = new OrgChart('chart2', options={
+            readonly:true,
+            save_coords_cb:cb,
+            create_name:()=>{return  new fabric.Circle({
+                    radius:10,
+                    // 
+                    fill: 'red',
+                    originX: "center",
+                    originY: "center",
+                    // 
+                })}
+        })
+        org2.generateOrg(tree)
+    </script>
+   
+    </body>
+</html> 

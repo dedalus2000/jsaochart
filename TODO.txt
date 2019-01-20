@@ -1,0 +1,5 @@
+- department coordinates must be much more clear
+- bottomPoints must be distinguishable (if a dept. is a Fabric Circle it will be managed by the readonly flag)
+- write the license on the files
+- create the minified js version
+- user must be able to save zoom & zoom position 

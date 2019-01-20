@@ -1,0 +1,17 @@
+{
+    "license": "MIT",
+    "main": "lib/index.js",
+    "name": "my-project",
+    "scripts": {
+        "build": "babel src/ -d lib/",
+        "prepublish": "yarn run build"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "8",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-flow": "^6.23.0",
+        "eslint": "4.x",
+        "flow-bin": "^0.89.0"
+    }
+}
