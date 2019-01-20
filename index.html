@@ -75,14 +75,15 @@
         var org2 = new OrgChart('chart2', options={
             readonly:true,
             save_coords_cb:cb,
-            create_name:()=>{return  new fabric.Circle({
-                    radius:10,
-                    // 
-                    fill: 'red',
-                    originX: "center",
-                    originY: "center",
-                    // 
-                })}
+            // to be improved
+            // create_dept:()=>{return  new fabric.Circle({
+            //         radius:10,
+            //         // 
+            //         fill: 'red',
+            //         originX: "center",
+            //         originY: "center",
+            //         // 
+            //     })}
         })
         org2.generateOrg(tree)
     </script>
