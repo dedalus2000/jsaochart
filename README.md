@@ -31,6 +31,7 @@ Each department could have different color; if not specified, children will inhe
 
 The departments could have persons; they can be listed with different text styles.
 
+All vertical movements are rounded by a "SNAP" value, in order to allow you to keep objects aligned 
 
 # Few notes:
 - look at the TODO.txt for the known missing features/requests. I will merge it in this readme very soon
