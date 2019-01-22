@@ -8,7 +8,7 @@ Screenshot:
 ![Click here for the screenshot]( https://user-images.githubusercontent.com/2760504/51443121-76a29b00-1ce4-11e9-960c-fb7972787007.png )
 
 
-I was unable to find a good -for my needs- organizational chart library, so I tryed to create it by my own: jaoachart is the result..
+I was unable to find a good -for my needs- organizational chart library, so I tried to create it by my own: jaoachart is the result..
 
 Try to see the demo with 
 ```
